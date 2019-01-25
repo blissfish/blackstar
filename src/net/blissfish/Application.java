@@ -15,7 +15,7 @@ public class Application {
     
     @RequestMapping("/hello")
     public String getHello() {
-        return "Hello v1m1";
+        return "Hello v1.0.0";
     }
     
 }
