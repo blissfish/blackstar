@@ -3,7 +3,7 @@ MAINTAINER blissfish <mark.evertz@gmx.de>
 
 # Keep consistent with build.gradle 
 ENV APP_JAR_NAME blackstar
-ENV APP_JAR_VERSION 1.0.0
+ENV APP_JAR_VERSION 2.0.0
 
 COPY target/${APP_JAR_NAME}-${APP_JAR_VERSION}.jar /app.jar
 
