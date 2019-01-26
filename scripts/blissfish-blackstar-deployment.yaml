@@ -1,0 +1,23 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata: 
+  name: blissfish-blackstar
+  namespace: default
+  labels: 
+    run: blissfish-blackstar
+spec: 
+  replicas: 1
+  selector: 
+    matchLabels: 
+      run: blissfish-blackstar
+  template: 
+    metadata: 
+      labels: 
+        run: blissfish-blackstar
+    spec: 
+      containers:
+      - name: blissfish-blackstar
+        image: blissfish/blackstar:2.0.0
+        ports:              
+        - containerPort: 8080
+          protocol: TCP
