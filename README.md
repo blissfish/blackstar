@@ -11,7 +11,7 @@ az aks create \
     --enable-addons monitoring \
     --generate-ssh-keys
     
-az aks get-credentials --resource-group BlissfishRG --name BlissfishAKSCluster
+az aks get-credentials --overwrite-existing --resource-group BlissfishRG --name BlissfishAKSCluster
 
 kubectl get nodes
 
@@ -32,4 +32,8 @@ https://docs.microsoft.com/de-de/azure/aks/kubernetes-dashboard
 kubectl create clusterrolebinding kubernetes-dashboard --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
 az aks browse --resource-group BlissfishRG --name BlissfishAKSCluster
 az group delete --name BlissfishRG --yes --no-wait
+az aks delete --name BlissfishAKSCluster --resource-group BlissfishRG --no-wait
+
+HELM
+kubectl apply -f helm-rbac.yaml
 
