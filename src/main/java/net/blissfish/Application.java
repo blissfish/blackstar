@@ -21,6 +21,7 @@ public class Application {
 	public void logSomething() {
 		logger.debug("Sample Debug Message");
 		logger.trace("Sample Trace Message");
+		logger.info("Sample Info Message");
 	}
 	
     public static void main(String[] args) {
@@ -29,8 +30,11 @@ public class Application {
     
     @RequestMapping("/hello")
     public String getHello() {
+    	logger.info("Returning ["+HELLO_MSG+"]");
     	logger.debug("Returning ["+HELLO_MSG+"]");
-        return HELLO_MSG;
+
+    	return HELLO_MSG;
+        
     }
     
 }
