@@ -1,4 +1,22 @@
 # blackstar
+-- build
+mvn spring-boot:run
+https://rogerdudler.github.io/git-guide/index.de.html 
+
+-- get list of tags
+git tag -l
+-- tag
+git log
+git tag 2.0.1 id (as derived from latest commit)
+
+-- build docker image
+docker build -t blissfish/blackstar:2.0.0 .
+
+-- run
+docker run --rm -p 8080:8080 blissfish/blackstar:2.0.0 .
+
+
+
 
 https://docs.microsoft.com/de-de/azure/aks/kubernetes-walkthrough
 
