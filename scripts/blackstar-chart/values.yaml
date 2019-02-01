@@ -5,16 +5,18 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  tag: stable
+  repository: blissfish/blackstar
+  tag: latest
   pullPolicy: IfNotPresent
 
 nameOverride: ""
 fullnameOverride: ""
 
 service:
-  type: ClusterIP
-  port: 80
+  type: LoadBalancer
+  name: blissfish-blackstar
+  externalPort: 80
+  internalPort: 8080
 
 ingress:
   enabled: false

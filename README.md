@@ -15,6 +15,14 @@ docker build -t blissfish/blackstar:2.0.0 .
 -- run
 docker run --rm -p 8080:8080 blissfish/blackstar:2.0.0 .
 
+-- push to docker hub
+docker login
+
+docker push blissfish/blackstar:2.0.2
+
+docker system prune -a
+
+
 
 
 
