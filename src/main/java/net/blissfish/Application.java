@@ -33,8 +33,7 @@ public class Application {
     	logger.info("Returning ["+HELLO_MSG+"]");
     	logger.debug("Returning ["+HELLO_MSG+"]");
 
-    	return HELLO_MSG;
-        
+    	return HELLO_MSG;        
     }
     
 }
