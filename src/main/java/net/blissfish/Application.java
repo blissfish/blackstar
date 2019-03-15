@@ -15,12 +15,8 @@ import java.util.Map;
 @RestController
 public class Application {
 
-	private static final String HELLO_MSG = "Hello v2.0.0";
 	private static final Logger logger = LoggerFactory
 			.getLogger(Application.class);
-
-	private static final String template = "Echo: [%s]";
-
 
 	@PostConstruct
 	public void logSomething() {
@@ -35,10 +31,10 @@ public class Application {
     
     @RequestMapping("/hello")
     public String getHello() {
-    	logger.info("Returning ["+HELLO_MSG+"]");
-    	logger.debug("Returning ["+HELLO_MSG+"]");
+    	logger.info("Returning [Hello World!]");
+    	logger.debug("Returning [Hello World!]");
 
-    	return HELLO_MSG;        
+    	return 	"Hello World!";
     }
 
 	@RequestMapping("/")
